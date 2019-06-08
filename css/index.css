@@ -484,3 +484,6 @@ img {
 .chevron:hover {
   border-color: #1E90FF;
 }
+.images-size {
+  transform: scale(1.3);
+}

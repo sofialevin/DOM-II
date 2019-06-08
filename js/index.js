@@ -24,3 +24,13 @@ window.onload = () => {
   window.addEventListener('scroll', function() {
     scrollIndicator.style.display = 'none';
   });
+
+  // dblclick
+
+const images = document.querySelectorAll('img');
+
+images.forEach(function(element) {
+    element.addEventListener('dblclick', function () {
+        element.classList.toggle('images-size');
+    })
+});
