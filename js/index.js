@@ -3,7 +3,7 @@
 // mouseover event
 const funBackground = document.querySelector('.fun-background');
 const funBusFirst = document.querySelector('.fun-bus-initial');
-const funBus = document.querySelector('.fun-bus');
+const funBus = document.querySelector('.fun-bus-infinite');
 funBackground.addEventListener('mouseover', () => {
     funBusFirst.classList.add('initial-fun-bus-moving');
     funBus.classList.add('fun-bus-moving');
