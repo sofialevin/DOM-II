@@ -180,6 +180,7 @@ img {
   background: #FFFFFF;
   border-bottom: 2px dashed #C0C0C0;
   position: fixed;
+  z-index: 2;
 }
 .main-navigation .nav-container {
   height: 100%;
@@ -349,4 +350,140 @@ img {
 .home .content-pick .destination .btn:hover {
   background: #FFFFFF;
   color: #17A2B8;
+}
+.fun-bus-initial {
+  position: absolute;
+  left: 35.5%;
+  top: 145px;
+  z-index: 1;
+  width: 236px;
+  animation: shake 0.5s 2s;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.fun-bus-infinite {
+  position: absolute;
+  left: -30%;
+  top: 145px;
+  z-index: 1;
+  width: 236px;
+}
+.initial-fun-bus-moving {
+  animation: sway 1s ease-in infinite, drive 5s ease-in 1;
+  animation-fill-mode: forwards;
+}
+@keyframes drive {
+  0% {
+    left: 35.5%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes sway {
+  0% {
+    top: 145px;
+  }
+  50% {
+    top: 150px;
+  }
+  100% {
+    top: 145px;
+  }
+}
+.fun-bus-moving {
+  animation: drive-infinite 10s linear infinite, sway 1s linear infinite;
+  animation-delay: 5s;
+}
+@keyframes drive-infinite {
+  0% {
+    left: -30%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes sway {
+  0% {
+    top: 145px;
+  }
+  50% {
+    top: 150px;
+  }
+  100% {
+    top: 145px;
+  }
+}
+.intro {
+  position: relative;
+  overflow: hidden;
+}
+.chevron-container {
+  animation: bounce 1.5s ease-in-out infinite;
+  position: fixed;
+  left: 10%;
+  bottom: 10%;
+}
+.chevron {
+  display: none;
+  margin: auto;
+  height: 20px;
+  width: 20px;
+  border-bottom: 3px solid #000;
+  border-left: 3px solid #000;
+  transform: rotate(-45deg);
+}
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.chevron-container:hover {
+  animation-iteration-count: 1;
+  cursor: pointer;
+}
+.chevron:hover {
+  border-color: #1E90FF;
+}
+.images-size {
+  transform: scale(1.3);
 }
